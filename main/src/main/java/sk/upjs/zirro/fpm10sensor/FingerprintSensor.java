@@ -44,12 +44,12 @@ public class FingerprintSensor {
 		/**
 		 * Fingerprint id.
 		 */
-		final int id;
+		private final int id;
 
 		/**
 		 * Matching score.
 		 */
-		final int matchScore;
+		private final int matchScore;
 
 		/**
 		 * Constructs a search result.
@@ -62,6 +62,14 @@ public class FingerprintSensor {
 		SearchResult(int id, int matchScore) {
 			this.id = id;
 			this.matchScore = matchScore;
+		}
+
+		public int getId() {
+			return id;
+		}
+
+		public int getMatchScore() {
+			return matchScore;
 		}
 	}
 

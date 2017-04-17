@@ -304,12 +304,12 @@ public class FingerprintSensor {
 	/**
 	 * The char file buffer 1.
 	 */
-	private static final byte CHAR_BUFFER1 = 0x01;
+	public static final byte CHAR_BUFFER1 = 0x01;
 
 	/**
 	 * The char file buffer 2.
 	 */
-	private static final byte CHAR_BUFFER2 = 0x02;
+	public static final byte CHAR_BUFFER2 = 0x02;
 
 	/**
 	 * The serial port.
@@ -530,7 +530,7 @@ public class FingerprintSensor {
 	 * @param humanActionListener
 	 *            listener for human interaction.
 	 * @throws SerialPortException
-	 * @throws SerialPortException
+	 * @return the search result.
 	 */
 	public SearchResult uploadImageAndSearchWorkflow(String imagePathName, HumanActionListener humanActionListener)
 			throws SerialPortException, FingerprintSensorException, IOException {
@@ -946,7 +946,7 @@ public class FingerprintSensor {
 	 * @param charBufferId
 	 *            character file buffer number (1 or 2)
 	 */
-	private void image2Tz(int charBufferId, long timeout) throws SerialPortException, FingerprintSensorException {
+	public void image2Tz(int charBufferId, long timeout) throws SerialPortException, FingerprintSensorException {
 		// create command data
 		int packet[] = { IC_IMAGE2TZ, charBufferId };
 
